@@ -19,7 +19,7 @@ class CreateChatCategories extends Migration
             $table->string('to');
             $table->longText('message');
             $table->bigInteger('boardinghouse_id');
-            $table->bigInteger('user_id');
+            $table->bigInteger('users_id');
             $table->timestamps();
         });
     }

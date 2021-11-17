@@ -18,14 +18,14 @@ class AddFieldToUsersTable extends Migration
             $table->string('gender')->after('email')->nullable();
             $table->string('user_level')->after('email')->nullable();
             $table->string('born_date')->after('email')->nullable();
-            $table->string('address')->after('email')->nullable();
+            $table->longText('address')->after('email')->nullable();
             $table->string('status')->after('email')->nullable();
             $table->string('last_studied')->after('email')->nullable();
             $table->string('emergency_num')->after('email')->nullable();
             $table->string('job')->after('email')->nullable();
             $table->string('agency')->after('email')->nullable();
-            $table->string('profile_photo')->after('email')->nullable();
-            $table->string('ktp_photo')->after('email')->nullable();
+            $table->longText('profile_photo')->after('email')->nullable();
+            $table->longText('ktp_photo')->after('email')->nullable();
             $table->bigInteger('chat_id')->after('email');
         });
     }

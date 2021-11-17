@@ -20,6 +20,20 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'phone_num',
+        'gender',
+        'user_level',
+        'born_date',
+        'address',
+        'status',
+        'last_studied',
+        'emergency_num',
+        'job',
+        'agency',
+        'profile_photo',
+        'ktp_photo',
+        'chat_id',
+        'email',
         'password',
     ];
 
@@ -41,4 +55,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    
+
+    // public function admin()
+    // {
+    //     return $this->hasOne(Admin::class, 'users_id', 'id');
+    // }
+
+    // public function 
 }
