@@ -16,7 +16,7 @@ class FotoKamar extends Model
      * @var string[]
      */
     protected $fillable = [
-        'name',
+        
         'front',
         'inside',
         'bathroom',

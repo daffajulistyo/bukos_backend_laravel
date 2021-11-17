@@ -15,7 +15,6 @@ class Chat extends Model
      * @var string[]
      */
     protected $fillable = [
-        'name',
         'sender',
         'to',
         'message',
