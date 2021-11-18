@@ -18,4 +18,9 @@ class Rating extends Model
         'clean_r',
         
     ];
+
+    public function boardingHouses()
+    {
+        return $this->hasMany(BoardingHouse::class, 'rating_id','id');
+    }
 }

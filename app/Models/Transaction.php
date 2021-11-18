@@ -19,4 +19,14 @@ class Transaction extends Model
         'kos_id',
         
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class,'users_id', 'id');
+    }
+
+    public function boardingHouses()
+    {
+        return $this->hasMany(BoardingHouse::class, 'transaction_id', 'id');
+    }
 }

@@ -20,4 +20,9 @@ class FotoKos extends Model
         'from_street',
         
     ];
+
+    public function boardingHouse()
+    {
+        return $this->belongsTo(BoardingHouse::class, 'fotokos_id', 'id');
+    }
 }

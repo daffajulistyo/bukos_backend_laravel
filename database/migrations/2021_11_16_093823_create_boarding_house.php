@@ -24,7 +24,7 @@ class CreateBoardingHouse extends Migration
             $table->bigInteger('rating_id');
             $table->bigInteger('jenis_id');
             $table->bigInteger('type_id');
-            
+            $table->bigInteger('transaction_id');
             $table->bigInteger('kelas_id');
             $table->bigInteger('peraturan_id');
             $table->bigInteger('pengelola_id');

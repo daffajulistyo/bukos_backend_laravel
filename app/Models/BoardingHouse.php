@@ -23,6 +23,7 @@ class BoardingHouse extends Model
         'rating_id',
         'jenis_id',
         'type_id',
+        'transaction_id',
         'kelas_id',
         'peraturan_id',
         'pengelola_id',
@@ -32,4 +33,48 @@ class BoardingHouse extends Model
         'chat_id',
         'years',
     ];
+
+    public function transaction()
+    {
+        return $this->belongsTo(Transaction::class, 'transaction_id', 'id');
+    }
+
+    public function pengelola()
+    {
+        return $this->hasOne(Pengelola::class,'id', 'pengelola_id');
+    }
+
+    public function rating()
+    {
+        return $this->belongsTo(Rating::class, 'rating_id' , 'id');
+    }
+
+    public function fotoKoss()
+    {
+        return $this->hasMany(FotoKos::class, 'id', 'fotokos_id');
+    }
+
+    public function fotoKamars()
+    {
+        return $this->hasMany(FotoKamar::class,'id', 'fotokamar_id');
+    }
+
+    public function fasilitass()
+    {
+        return $this->hasMany(Fasilitas::class, 'id' , 'fasilitas_id');
+    }
+
+    public function peraturans()
+    {
+        return $this->hasMany(Peraturan::class, 'id', 'peraturan_id');
+    }
+
+    public function chats()
+    {
+        return $this->hasMany(Chat::class, 'id', 'chat_id');
+    }
+
+
+
+    // public function 
 }

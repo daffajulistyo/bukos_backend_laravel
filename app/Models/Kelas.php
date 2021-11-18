@@ -19,4 +19,9 @@ class Kelas extends Model
         'banner',
         
     ];
+
+    public function boardingHouse()
+    {
+        return $this->belongsTo(BoardingHouse::class, 'kelas_id', 'id');
+    }
 }

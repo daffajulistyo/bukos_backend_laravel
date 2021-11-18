@@ -23,5 +23,10 @@ class FotoKamar extends Model
         'optional',
     ];
 
+    public function boardingHouse()
+    {
+        return $this->belongsTo(BoardingHouse::class, 'fotokamar_id', 'id');
+    }
+
     
 }

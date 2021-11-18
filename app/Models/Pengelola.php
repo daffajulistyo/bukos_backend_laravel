@@ -19,4 +19,9 @@ class Pengelola extends Model
         'phone_num',
         
     ];
+
+    public function boardingHouse()
+    {
+        return $this->belongsTo(BoardingHouse::class, 'pengelola_id', 'id');
+    }
 }

@@ -17,4 +17,9 @@ class Peraturan extends Model
         'name',
         
     ];
+
+    public function boardingHouse()
+    {
+        return $this->belongsTo(BoardingHouse::class, 'peraturan_id' , 'id');
+    }
 }
