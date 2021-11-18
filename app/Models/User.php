@@ -33,7 +33,6 @@ class User extends Authenticatable
         'profile_photo',
         'ktp_photo',
         'chat_id',
-        'email',
         'password',
     ];
 

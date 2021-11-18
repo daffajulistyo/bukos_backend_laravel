@@ -16,7 +16,7 @@ class AddFieldToUsersTable extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('phone_num')->after('email')->nullable();
             $table->string('gender')->after('email')->nullable();
-            $table->string('user_level')->after('email')->nullable();
+            $table->string('user_level')->after('email')->default('USER');
             $table->string('born_date')->after('email')->nullable();
             $table->longText('address')->after('email')->nullable();
             $table->string('status')->after('email')->nullable();
@@ -26,7 +26,7 @@ class AddFieldToUsersTable extends Migration
             $table->string('agency')->after('email')->nullable();
             $table->longText('profile_photo')->after('email')->nullable();
             $table->longText('ktp_photo')->after('email')->nullable();
-            $table->bigInteger('chat_id')->after('email');
+            $table->bigInteger('chat_id')->after('email')->nullable();
         });
     }
 
