@@ -21,7 +21,7 @@ class UserController extends Controller
             $request -> validate([
                 'name' => ['required','string','max:255'], 
                 'email' => ['required','email','string','max:255','unique:users'],
-                'phone_num' => ['required','string','max:255'],
+                'phone_num' => ['required','string','min:11'],
                 'password' => ['required','string', 'min:6'],
             ]);
 
@@ -53,6 +53,8 @@ class UserController extends Controller
     public function login(Request $request)
     {
         try{
+
+
             $request->validate([
                 'email' => 'email|required',
                 'password'=> 'required'
@@ -93,6 +95,7 @@ class UserController extends Controller
 
     public function updateProfile(Request $request)
     {
+        
         $data = $request->all();
 
         $user = Auth::user();
