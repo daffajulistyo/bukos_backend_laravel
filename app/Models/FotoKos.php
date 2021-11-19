@@ -15,9 +15,8 @@ class FotoKos extends Model
      * @var string[]
      */
     protected $fillable = [
-        'front',
-        'inside',
-        'from_street',
+        'foto_kos',
+        'boardinghouse_id',
         
     ];
 

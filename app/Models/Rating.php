@@ -16,6 +16,7 @@ class Rating extends Model
      */
     protected $fillable = [
         'clean_r',
+        'boardinghouse_id',
         
     ];
 

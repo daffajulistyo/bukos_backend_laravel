@@ -17,6 +17,7 @@ class Kelas extends Model
     protected $fillable = [
         'name',
         'banner',
+        'boardinghouse_id',
         
     ];
 

@@ -16,7 +16,7 @@ class Transaction extends Model
      */
     protected $fillable = [
         'user_id',
-        'kos_id',
+        'boardinghouse_id',
         
     ];
 

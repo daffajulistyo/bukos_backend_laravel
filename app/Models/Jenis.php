@@ -16,6 +16,7 @@ class Jenis extends Model
      */
     protected $fillable = [
         'name',
+        'boardinghouse_id',
         
     ];
 

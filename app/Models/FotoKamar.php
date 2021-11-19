@@ -17,10 +17,8 @@ class FotoKamar extends Model
      */
     protected $fillable = [
         
-        'front',
-        'inside',
-        'bathroom',
-        'optional',
+        'foto_kamar',
+        'boardinghouse_id',
     ];
 
     public function boardingHouses()

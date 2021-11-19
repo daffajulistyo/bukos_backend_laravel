@@ -16,6 +16,7 @@ class Fasilitas extends Model
      */
     protected $fillable = [
         'name',
+        'boardinghouse_id',
         
     ];
 
