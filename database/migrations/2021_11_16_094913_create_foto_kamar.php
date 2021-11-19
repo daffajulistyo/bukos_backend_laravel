@@ -14,11 +14,9 @@ class CreateFotoKamar extends Migration
     public function up()
     {
         Schema::create('foto_kamar', function (Blueprint $table) {
-            $table->id();
-            $table->longText('front');
-            $table->longText('inside');
-            $table->longText('bathroom');
-            $table->longText('optional')->nullable();
+            // $table->id();
+            $table->longText('foto_kamar');
+            $table->bigInteger('boarding_house_id');
             $table->timestamps();
         });
     }

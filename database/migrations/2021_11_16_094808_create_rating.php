@@ -16,6 +16,7 @@ class CreateRating extends Migration
         Schema::create('rating', function (Blueprint $table) {
             $table->id();
             $table->string('clean_r');
+            $table->bigInteger('boarding_house');
             $table->timestamps();
         });
     }

@@ -14,8 +14,10 @@ class CreatePeraturan extends Migration
     public function up()
     {
         Schema::create('peraturan', function (Blueprint $table) {
-            $table->id();
+            // $table->id();
             $table->string('name');
+            
+            $table->bigInteger('boarding_house');
             $table->timestamps();
         });
     }

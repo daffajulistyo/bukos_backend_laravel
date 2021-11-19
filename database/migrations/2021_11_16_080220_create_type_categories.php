@@ -16,6 +16,7 @@ class CreateTypeCategories extends Migration
         Schema::create('type_categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->bigInteger('boarding_house');
             $table->timestamps();
         });
     }

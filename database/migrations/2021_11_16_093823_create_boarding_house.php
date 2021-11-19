@@ -21,18 +21,9 @@ class CreateBoardingHouse extends Migration
             $table->longText('description');
             $table->float('price');
             $table->float('discount')->nullable();
-            $table->bigInteger('rating_id');
-            $table->bigInteger('jenis_id');
-            $table->bigInteger('type_id');
-            $table->bigInteger('transaction_id');
-            $table->bigInteger('kelas_id');
-            $table->bigInteger('peraturan_id');
-            $table->bigInteger('pengelola_id');
-            $table->bigInteger('foto_kos_id');
-            $table->bigInteger('foto_kamar_id');
-            $table->bigInteger('fasilitas_id');
-            $table->bigInteger('chat_id');
+           
             $table->bigInteger('years');
+            $table->bigInteger('pengelola_id');
             $table->timestamps();
         });
     }

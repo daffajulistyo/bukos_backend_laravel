@@ -18,6 +18,7 @@ class CreateKelasCategories extends Migration
             
             $table->string('name');
             $table->string('banner');
+            $table->bigInteger('boarding_house');
             $table->timestamps();
         });
     }

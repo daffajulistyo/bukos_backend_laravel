@@ -18,6 +18,8 @@ class CreatePengelola extends Migration
             $table->string('name');
             $table->string('phone_num');
             $table->timestamps();
+
+            //mantap
         });
     }
 

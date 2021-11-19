@@ -27,6 +27,6 @@ class Transaction extends Model
 
     public function boardingHouses()
     {
-        return $this->hasMany(BoardingHouse::class, 'transaction_id', 'id');
+        return $this->belongsTo(BoardingHouse::class, 'boardinghouse_id', 'id');
     }
 }

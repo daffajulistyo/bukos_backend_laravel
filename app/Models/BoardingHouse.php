@@ -20,59 +20,107 @@ class BoardingHouse extends Model
         'description',
         'price',
         'discount',
-        'rating_id',
-        'jenis_id',
-        'type_id',
-        'transaction_id',
-        'kelas_id',
-        'peraturan_id',
         'pengelola_id',
-        'fotokos_id',
-        'fotokamar_id',
-        'fasilitas_id',
-        'chat_id',
         'years',
     ];
 
-    public function transaction()
+    public function transactions()
     {
-        return $this->belongsTo(Transaction::class, 'transaction_id', 'id');
+        return $this->hasMany(Transaction::class, 'boardinghouse_id' , 'id');
     }
 
-    public function pengelola()
+    public function jenis()
     {
-        return $this->hasOne(Pengelola::class,'id', 'pengelola_id');
+        return $this->hasMany(Jenis::class, 'boardinghouse_id' , 'id');
     }
 
-    public function rating()
+    public function type()
     {
-        return $this->belongsTo(Rating::class, 'rating_id' , 'id');
+        return $this->hasMany(Type::class, 'boardinghouse_id' , 'id');
     }
 
-    public function fotoKoss()
+    public function kelas()
     {
-        return $this->hasMany(FotoKos::class, 'id', 'fotokos_id');
-    }
-
-    public function fotoKamars()
-    {
-        return $this->hasMany(FotoKamar::class,'id', 'fotokamar_id');
-    }
-
-    public function fasilitass()
-    {
-        return $this->hasMany(Fasilitas::class, 'id' , 'fasilitas_id');
-    }
-
-    public function peraturans()
-    {
-        return $this->hasMany(Peraturan::class, 'id', 'peraturan_id');
+        return $this->hasMany(Kelas::class, 'boardinghouse_id' , 'id');
     }
 
     public function chats()
     {
-        return $this->hasMany(Chat::class, 'id', 'chat_id');
+        return $this->hasMany(Chat::class, 'boardinghouse_id' , 'id');
     }
+
+    public function ratings()
+    {
+        return $this->hasMany(Rating::class, 'boardinghouse_id' , 'id');
+    }
+
+    public function pengelola()
+    {
+        return $this->hasOne(Pengelola::class, 'boardinghouse_id' , 'id');
+    }
+
+    public function fotoKos()
+    {
+        return $this->hasMany(FotoKos::class, 'boardinghouse_id' , 'id');
+    }
+
+    public function fotoKamars()
+    {
+        return $this->hasMany(FotoKamar::class, 'boardinghouse_id' , 'id');
+    }
+
+    public function fasilitas()
+    {
+        return $this->hasMany(Fasilitas::class, 'boardinghouse_id' , 'id');
+    }
+
+    public function peraturans()
+    {
+        return $this->hasMany(Peraturan::class, 'boardinghouse_id' , 'id');
+    }
+
+
+    // public function transaction()
+    // {
+    //     return $this->belongsTo(Transaction::class, 'transaction_id', 'id');
+    // }
+
+    // public function pengelola()
+    // {
+    //     return $this->hasOne(Pengelola::class,'id', 'pengelola_id');
+    // }
+
+    // public function rating()
+    // {
+    //     return $this->belongsTo(Rating::class, 'rating_id' , 'id');
+    // }
+
+    // public function fotoKoss()
+    // {
+    //     return $this->hasMany(FotoKos::class, 'id', 'fotokos_id');
+    // }
+
+    // public function fotoKamars()
+    // {
+    //     return $this->hasMany(FotoKamar::class,'id', 'fotokamar_id');
+    // }
+
+    // public function fasilitass()
+    // {
+    //     return $this->hasMany(Fasilitas::class, 'id' , 'fasilitas_id');
+    // }
+
+    // public function peraturans()
+    // {
+    //     return $this->hasMany(Peraturan::class, 'id', 'peraturan_id');
+    // }
+
+    // public function chats()
+    // {
+    //     return $this->hasMany(Chat::class, 'id', 'chat_id');
+    // }
+
+
 
 
 

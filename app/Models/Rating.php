@@ -21,6 +21,6 @@ class Rating extends Model
 
     public function boardingHouses()
     {
-        return $this->hasMany(BoardingHouse::class, 'rating_id','id');
+        return $this->belongsTo(BoardingHouse::class, 'boardinghouse_id','id');
     }
 }

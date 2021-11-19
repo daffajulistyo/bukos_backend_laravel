@@ -21,8 +21,8 @@ class FotoKos extends Model
         
     ];
 
-    public function boardingHouse()
+    public function boardingHouses()
     {
-        return $this->belongsTo(BoardingHouse::class, 'fotokos_id', 'id');
+        return $this->belongsTo(BoardingHouse::class, 'boardinghouse_id','id');
     }
 }

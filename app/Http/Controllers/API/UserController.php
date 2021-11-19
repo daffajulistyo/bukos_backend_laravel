@@ -17,7 +17,6 @@ class UserController extends Controller
     public function register(Request $request)
     {
         try {
-            //code...
             $request -> validate([
                 'name' => ['required','string','max:255'], 
                 'email' => ['required','email','string','max:255','unique:users'],
@@ -40,11 +39,11 @@ class UserController extends Controller
                 'access_token' => $tokenResult,
                 'token_type' => 'Bearer',
                 'user' => $user
-            ], 'User Registered'
+            ],  'User Registered'
         );
         } catch (Exception $error){
             return ResponseFormatter::error([
-                'message' => 'Mungkin Error',
+                'message' => 'Something Went Wrong',
                 'error' => $error,
             ], 'Authentication Failed' , 500);
         }
@@ -95,6 +94,11 @@ class UserController extends Controller
 
     public function updateProfile(Request $request)
     {
+        $request -> validate([
+            'name' => ['required','string','max:255'], 
+            'email' => ['required','email','string','max:255','unique:users'],
+            'phone_num' => ['required','string','min:11'],
+        ]);
         
         $data = $request->all();
 

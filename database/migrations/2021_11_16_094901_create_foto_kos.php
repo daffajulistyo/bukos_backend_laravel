@@ -14,10 +14,9 @@ class CreateFotoKos extends Migration
     public function up()
     {
         Schema::create('foto_kos', function (Blueprint $table) {
-            $table->id();
-            $table->longText('front');
-            $table->longText('inside');
-            $table->longText('from_sreet');
+            // $table->id();
+            $table->longText('foto_kos');
+            $table->bigInteger('boarding_house_id');
             $table->timestamps();
         });
     }

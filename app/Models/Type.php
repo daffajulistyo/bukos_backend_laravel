@@ -21,6 +21,6 @@ class Type extends Model
 
     public function boardingHouse()
     {
-        return $this->belongsTo(BoardingHouse::class, 'type_id', 'id');
+        return $this->belongsTo(BoardingHouse::class, 'boardinghouse_id', 'id');
     }
 }

@@ -27,5 +27,9 @@ class Chat extends Model
         return $this->belongsTo(User::class, 'users_id', 'id');
     }
 
+    public function boardingHouses()
+    {
+        return $this->belongsTo(BoardingHouse::class, 'boardinghouse_id','id');
+    }
     
 }

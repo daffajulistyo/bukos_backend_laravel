@@ -19,8 +19,8 @@ class Jenis extends Model
         
     ];
 
-    public function boardingHouse()
+    public function boardingHouses()
     {
-        return $this->belongsTo(BoardingHouse::class, 'jenis_id','id');
+        return $this->belongsTo(BoardingHouse::class, 'boardinghouse_id','id');
     }
 }

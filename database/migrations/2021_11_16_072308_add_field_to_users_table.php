@@ -26,7 +26,6 @@ class AddFieldToUsersTable extends Migration
             $table->string('agency')->after('email')->nullable();
             $table->longText('profile_photo')->after('email')->nullable();
             $table->longText('ktp_photo')->after('email')->nullable();
-            $table->bigInteger('chat_id')->after('email')->nullable();
         });
     }
 
@@ -50,7 +49,6 @@ class AddFieldToUsersTable extends Migration
             $table->dropColumn('agency');
             $table->dropColumn('profile_photo');
             $table->dropColumn('ktp_photo');
-            $table->dropColumn('chat_id');
         });
     }
 }

@@ -16,6 +16,7 @@ class CreateJenisCategories extends Migration
         Schema::create('jenis_categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->bigInteger('boarding_house');
             $table->timestamps();
         });
     }
