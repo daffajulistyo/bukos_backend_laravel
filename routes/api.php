@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\API\BoardingHouseController;
 use App\Http\Controllers\API\UserController;
+use App\Models\BoardingHouse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,8 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::post('register', [UserController::class, 'register']);
-Route::post('login', [UserController::class, 'login']);
+
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('user', [UserController::class, 'fetch']);
@@ -27,5 +28,6 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 
 Route::get('transaction', [TransactionController::class, 'all']);
-    
-
+Route::post('register', [UserController::class, 'register']);
+Route::post('login', [UserController::class, 'login']);
+Route::get('boardingHouse', [BoardingHouseController::class, 'all']);
